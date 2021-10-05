@@ -17,7 +17,7 @@ function fetchMissing(material) {
 
 const handler = {file: null, material: []};
 
-const state = new Proxy({title: 'Signerbox2'}, handler);
+const state = new Proxy({title: 'Podatok.signcrypt'}, handler);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -26,17 +26,6 @@ class App extends Component {
       this.forceUpdate();
       return true;
     };
-  }
-
-  handleAdd(material) {
-    state.material = makeMatches(material);
-    fetchMissing(state.material)
-    .then((certificates)=> {
-      if (certificates) {
-        state.material = makeMatches([...state.material, ...certificates]);
-      }
-    })
-    .catch(()=> null);
   }
 
   handleFile(file) {

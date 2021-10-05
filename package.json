@@ -1,9 +1,11 @@
 {
-  "name": "signerbox2",
-  "version": "0.1.0",
+  "name": "podatok.signer",
+  "version": "0.0.1",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "asn1.js": "github:muromec/asn1.js",
+    "axios": "^0.21.1",
     "gost89": "^0.1.8",
     "jksreader": "^1.0.0",
     "jkurwa": "^1.4.0",
